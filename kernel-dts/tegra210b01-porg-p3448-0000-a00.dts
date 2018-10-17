@@ -1,5 +1,6 @@
 /*
- * tegra210b01-porg-p3448-0001-a00.dts
+ * tegra210b01-porg-p3448-0000-a00.dts : SKU 0000 is for L4t
+ * and without EMMC and WIFI, with SPI NOR and SD Connector.
  *
  * Copyright (c) 2018, NVIDIA CORPORATION.  All rights reserved.
  *
@@ -18,8 +19,8 @@
  *
  */
 #include "tegra210b01-porg-p3448-common.dtsi"
-#include "porg-platforms/tegra210b01-porg-pinmux-p3448-0001-a00.dtsi"
-#include "porg-platforms/tegra210b01-porg-power-tree-p3448-0001-a00.dtsi"
+#include "porg-platforms/tegra210b01-porg-pinmux-p3448-0000-a00.dtsi"
+#include "porg-platforms/tegra210b01-porg-power-tree-p3448-0000-a00.dtsi"
 
 / {
 	model = "porg";
@@ -27,10 +28,4 @@
 	nvidia,dtsfilename = __FILE__;
 	nvidia,dtbbuildtime = __DATE__, __TIME__;
 
-	firmware {
-		android {
-			compatible = "android,firmware";
-			hardware = "porg";
-		};
-	};
 };

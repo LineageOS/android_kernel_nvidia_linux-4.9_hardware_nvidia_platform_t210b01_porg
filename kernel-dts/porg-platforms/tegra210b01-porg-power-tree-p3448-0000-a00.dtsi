@@ -15,7 +15,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 #include "ers-platforms/tegra210b01-ers-pmic-e2175-1122-a00.dtsi"
-#include "tegra210b01-porg-fixed-p3448-0001-a00.dtsi"
+#include "tegra210b01-porg-fixed-p3448-0000-a00.dtsi"
 
 / {
 	i2c@7000d000 {

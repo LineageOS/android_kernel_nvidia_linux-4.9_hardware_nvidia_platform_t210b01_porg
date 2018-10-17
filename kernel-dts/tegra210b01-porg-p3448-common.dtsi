@@ -89,7 +89,7 @@
 		mmc-hs400-enhanced-strobe;
 		built-in;
 		power-off-rail;
-		status = "okay";
+		status = "disabled";
 		bus-width = <8>;
 		non-removable;
 	};
@@ -97,10 +97,12 @@
 	sdhci@700b0200 { /* SDMMC2 for Wifi */
 		mmc-ocr-mask = <0x8>;
 		uhs-mask = <0x8>;
-		max-clk-limit = <200000000>;
+		only-1-8-v;
+		no-sd;
+		no-mmc;
 		power-off-rail;
 		force-non-removable-rescan;
-		status = "okay";
+		status = "disabled";
 	};
 
 	/* SD Card is present for L4T sku */
