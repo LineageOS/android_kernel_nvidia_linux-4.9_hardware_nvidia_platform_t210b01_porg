@@ -107,7 +107,19 @@
 
 	/* SD Card is present for L4T sku */
 	sdhci@700b0000 { /* SDMMC1 for SD card */
-		status = "disabled";
+		default-drv-type = <1>;
+		mmc-ocr-mask = <0x0>;
+		cd-gpios = <&gpio TEGRA_GPIO(Z, 1) 0>;
+		sd-uhs-sdr104;
+		sd-uhs-sdr50;
+		sd-uhs-sdr25;
+		sd-uhs-sdr12;
+		mmc-ddr-1_8v;
+		mmc-hs200-1_8v;
+		nvidia,cd-wakeup-capable;
+		no-sdio;
+		no-mmc;
+		status = "okay";
 	};
 
 	chosen {
