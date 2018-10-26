@@ -39,6 +39,30 @@
 #include "foster-platforms/tegra210-foster-powermon-p2530-0930-e01.dtsi"
 
 / {
+	firmware {
+		android {
+			compatible = "android,firmware";
+
+			fstab {
+				compatible = "android,fstab";
+				system {
+					compatible = "android,system";
+					dev = "/dev/block/platform/sdhci-tegra.3/by-name/APP";
+					type = "ext4";
+					mnt_flags = "ro,noatime";
+					fsmgr_flags = "wait,verify=/dev/block/platform/sdhci-tegra.3/by-name/MDA";
+				};
+				vendor {
+					compatible = "android,vendor";
+					dev = "/dev/block/platform/sdhci-tegra.3/by-name/vendor";
+					type = "ext4";
+					mnt_flags = "ro,noatime";
+					fsmgr_flags = "wait,verify=/dev/block/platform/sdhci-tegra.3/by-name/MDA";
+				};
+			};
+		};
+	};
+
 	gpio-keys {
 		power {
 			gpios = <&gpio TEGRA_GPIO(X, 5) GPIO_ACTIVE_LOW>;

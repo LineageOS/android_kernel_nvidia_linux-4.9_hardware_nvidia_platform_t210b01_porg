@@ -28,4 +28,10 @@
 	nvidia,dtsfilename = __FILE__;
 	nvidia,dtbbuildtime = __DATE__, __TIME__;
 
+	firmware {
+		android {
+			compatible = "android,firmware";
+			hardware = "sif";
+		};
+	};
 };
